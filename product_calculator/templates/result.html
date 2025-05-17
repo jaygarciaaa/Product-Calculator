@@ -16,19 +16,19 @@
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-center">
                 Total cost
-                <span class="badge bg-success rounded-pill">${{ total_cost | round(2) }}</span>
+                <span class="badge bg-success rounded-pill">₱{{ total_cost }}</span>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-center">
                 Cost per unit
-                <span class="badge bg-info rounded-pill">${{ cost_per_unit | round(2) }}</span>
+                <span class="badge bg-info rounded-pill">₱{{ cost_per_unit }}</span>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-center">
                 Revenue
-                <span class="badge bg-warning text-dark rounded-pill">${{ revenue | round(2) }}</span>
+                <span class="badge bg-warning text-dark rounded-pill">₱{{ revenue }}</span>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-center">
                 Profit
-                <span class="badge bg-danger rounded-pill">${{ profit | round(2) }}</span>
+                <span class="badge bg-danger rounded-pill">₱{{ profit }}</span>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-center">
                 Break-even units
@@ -36,36 +36,39 @@
             </li>
         </ul>
 
-        <!-- Ingredient Summary Table -->
         <h4>Ingredient Usage Summary</h4>
-            <table class="table table-bordered bg-white shadow-sm">
-                <thead class="table-light">
-        <tr>
-            <th>Ingredient</th>
-            <th>Required per Product Unit</th>
-            <th>Total Quantity Used</th>
-            <th>Total Remaining Unit</th> 
-            <th>Total Cost</th>
-        </tr>
-        </thead>
-                <tbody>
+        <table class="table table-bordered bg-white shadow-sm">
+            <thead class="table-light">
+                <tr>
+                    <th>Ingredient</th>
+                    <th>Required per Product Unit</th>
+                    <th>Total Quantity Used</th>
+                    <th>Total Remaining Unit</th>
+                    <th>Total Cost</th>
+                </tr>
+            </thead>
+            <tbody>
                 {% for ing in ingredients %}
                 <tr>
                     <td>{{ ing.name }}</td>
-                    <td>{{ ing.required_per_unit }}</td>
-                    <td>{{ ing.total_used }}</td>
-                    <td>{{ ing.remaining_qty }}</td>
+                    <td>{{ ing.required_per_unit }} {{ ing.required_unit }}</td>
+                    <td>{{ ing.total_used }} {{ ing.required_unit }}</td>
+                    <td>{{ ing.remaining_qty }} {{ ing.available_unit }}</td>
                     <td>₱{{ ing.total_cost }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
             <tfoot class="table-light">
                 <tr>
-                    <th colspan="3" class="text-end">Total Raw Cost</th>
+                    <th colspan="4" class="text-end">Total Raw Cost</th>
                     <th>₱{{ raw_total }}</th>
                 </tr>
             </tfoot>
-            </table>
+        </table>
+
+        <div class="mt-4">
+            <a href="/export/pdf" class="btn btn-outline-danger me-2" target="_blank">Export to PDF</a>
+        </div>
 
         <a class="btn btn-outline-secondary mt-4" href="/">← Back</a>
     </div>
