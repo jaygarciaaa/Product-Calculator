@@ -15,8 +15,12 @@
                 <span class="badge bg-primary rounded-pill">{{ max_units }}</span>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-center">
-                Total cost
-                <span class="badge bg-success rounded-pill">₱{{ total_cost }}</span>
+                Total raw cost
+                <span class="badge bg-success rounded-pill">₱{{ raw_total }}</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Total Overall Cost
+                <span class="badge bg-warning rounded-pill">₱{{ total_cost }}</span>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-center">
                 Cost per unit
@@ -42,6 +46,7 @@
                 <tr>
                     <th>Ingredient</th>
                     <th>Required per Product Unit</th>
+                    <th>Cost Per Unit</th>
                     <th>Total Quantity Used</th>
                     <th>Total Remaining Unit</th>
                     <th>Total Cost</th>
@@ -52,6 +57,7 @@
                 <tr>
                     <td>{{ ing.name }}</td>
                     <td>{{ ing.required_per_unit }} {{ ing.required_unit }}</td>
+                    <td>₱{{ ing.cost_per_unit }}</td>
                     <td>{{ ing.total_used }} {{ ing.required_unit }}</td>
                     <td>{{ ing.remaining_qty }} {{ ing.available_unit }}</td>
                     <td>₱{{ ing.total_cost }}</td>
@@ -63,12 +69,16 @@
                     <th colspan="4" class="text-end">Total Raw Cost</th>
                     <th>₱{{ raw_total }}</th>
                 </tr>
+                <tr>
+                    <th colspan="4" class="text-end">Total Overhead Cost</th>
+                    <th>₱{{ fixed_cost }}</th>
+                </tr>
+                <tr>
+                    <th colspan="4" class="text-end">Total Overall Cost</th>
+                    <th class="text-danger"> ₱{{ total_cost }}</th>
+                </tr>
             </tfoot>
         </table>
-
-        <div class="mt-4">
-            <a href="/export/pdf" class="btn btn-outline-danger me-2" target="_blank">Export to PDF</a>
-        </div>
 
         <a class="btn btn-outline-secondary mt-4" href="/">← Back</a>
     </div>
