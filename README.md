@@ -74,4 +74,5 @@ Each ingredient includes:
 
 ## Screenshot of Sample Output
 
-![Result Screenshot](./sample_output.png)
+![Result Screenshot](./product_calculator/images/sample_1.png)
+![Result Screenshot](./product_calculator/images/sample_2.png)
