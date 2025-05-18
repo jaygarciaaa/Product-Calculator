@@ -36,6 +36,18 @@ Each ingredient includes:
 ---
 
 ##  Program Usage
+- clone repository
+- install dependencies
+  - flask
+- cd src
+- python app.py
+
+
+## Using unittest testcases
+- make sure cd to root of repository
+- run commands:
+  - python -m unittest src.tests.test_input_routes
+  - python -m unittest src.tests.test_compute
 
 ### Inputs:
 - Product Name  
