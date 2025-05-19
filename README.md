@@ -4,6 +4,21 @@ This application helps calculate the cost of producing a product based on ingred
 
 ---
 
+## HOW TO USE
+- clone repository
+- install dependencies
+  - flask
+- cd src
+- python app.py
+
+## Using unittest testcases
+- make sure cd to root of repository
+- run commands:
+  - python -m unittest src.tests.test_input_routes
+  - python -m unittest src.tests.test_compute
+
+---
+
 ## Product Chosen
 
 **Example Product:** *Energy Drink*
@@ -74,5 +89,5 @@ Each ingredient includes:
 
 ## Screenshot of Sample Output
 
-![Result Screenshot](./product_calculator/images/sample_1.png)
-![Result Screenshot](./product_calculator/images/sample_2.png)
+![Result Screenshot](/static/images/sample_1.png)
+![Result Screenshot](/static/images/sample_2.png)
