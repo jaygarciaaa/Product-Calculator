@@ -89,8 +89,8 @@ Each ingredient includes:
 
 ## Screenshot of Sample Output
 
-![Result Screenshot](/static/images/sample_1.png)
 ![Result Screenshot](/static/images/sample_2.png)
+![Result Screenshot](/static/images/sample_1.png)
 
 ---
 
