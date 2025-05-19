@@ -89,5 +89,18 @@ Each ingredient includes:
 
 ## Screenshot of Sample Output
 
-![Result Screenshot](/static/images/sample_1.png)
 ![Result Screenshot](/static/images/sample_2.png)
+![Result Screenshot](/static/images/sample_1.png)
+
+---
+
+## Group Members:
+1. Emmanuel, Tammy Buenafe
+2. Garcia, John Michael - @jaygarciaaa
+3. Peña, John Rhey D.
+4. Rivera, Bernie Jr.
+5. Samarita, King Rey Mark - @nixxinix
+
+---
+
+Note: This is a project submitted as a requirement in CPE300 - Optimization Techniques course.
