@@ -91,3 +91,12 @@ Each ingredient includes:
 
 ![Result Screenshot](/static/images/sample_1.png)
 ![Result Screenshot](/static/images/sample_2.png)
+
+---
+
+## Group Members:
+1. Emmanuel, Tammy Buenafe
+2. Garcia, John Michael - @jaygarciaaa
+3. Peña, John Rhey D.
+4. Rivera, Bernie Jr.
+5. Samarita, King Rey Mark - @nixxinix
