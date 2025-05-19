@@ -100,3 +100,7 @@ Each ingredient includes:
 3. Peña, John Rhey D.
 4. Rivera, Bernie Jr.
 5. Samarita, King Rey Mark - @nixxinix
+
+---
+
+Note: This is a project submitted as a requirement in CPE300 - Optimization Techniques course.
